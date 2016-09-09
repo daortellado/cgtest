@@ -43,41 +43,14 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   
-  	  <script>
-  var data = [
-    {id: 0, date: '2016-09-30', deadline: 1, description: 'Policies for unneeded accounts'},
-    {id: 1, date: '2016-10-31', deadline: 2, description: 'Post retroactive meeting information on AG website'},
-    {id: 2, date: '2017-01-15', deadline: 3, description: 'Biannual reports from user agencies on progress'},
-    {id: 3, date: '2017-06-30', deadline: 4, description: 'Quarterly reports on AG website; draft plan for recert training; develop best practices'},
-    {id: 4, date: '2018-06-30', deadline: 5, description: 'Implement training; users finish gang review'},
-    {id: 5, date: '2019-09-30', deadline: 6, description: 'Users finish review of individuals'}
-  ];
-  var dataset = new recline.Model.Dataset({
-    records: data
-  });
-  
-  var $el = $('#mytimeline');
-  var timeline = new recline.View.Timeline({
-    model: dataset
-  });
-  $el.append(timeline.el);
-  // set the headline/title for each record with x column
-  timeline.convertRecord = function(record, fields) {
-    var out = this._convertRecord(record);
-    if (out) {
-      out.headline = record.get('deadline').toString();
-    }
-    return out;
-  }
-  timeline.render();
-  </script>
-
+  	  
 </head>
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
+  <style type="text/css">#mytimeline .recline-timeline { height: 400px; }</style>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -144,7 +117,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Task assignments</h1>
-                    <style type="text/css">#mytimeline .recline-timeline { height: 400px; }</style>
+                    
                     <div id="mytimeline"></div>
   					<div style="clear: both;"></div>
                 </div>
@@ -173,6 +146,36 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
 
+  <script>
+  var data = [
+    {id: 0, date: '2016-09-30', deadline: 1, description: 'Policies for unneeded accounts'},
+    {id: 1, date: '2016-10-31', deadline: 2, description: 'Post retroactive meeting information on AG website'},
+    {id: 2, date: '2017-01-15', deadline: 3, description: 'Biannual reports from user agencies on progress'},
+    {id: 3, date: '2017-06-30', deadline: 4, description: 'Quarterly reports on AG website; draft plan for recert training; develop best practices'},
+    {id: 4, date: '2018-06-30', deadline: 5, description: 'Implement training; users finish gang review'},
+    {id: 5, date: '2019-09-30', deadline: 6, description: 'Users finish review of individuals'}
+  ];
+  var dataset = new recline.Model.Dataset({
+    records: data
+  });
+  
+  var $el = $('#mytimeline');
+  var timeline = new recline.View.Timeline({
+    model: dataset
+  });
+  $el.append(timeline.el);
+  // set the headline/title for each record with x column
+  timeline.convertRecord = function(record, fields) {
+    var out = this._convertRecord(record);
+    if (out) {
+      out.headline = record.get('deadline').toString();
+    }
+    return out;
+  }
+  timeline.render();
+  </script>
+
+  
 </body>
 
 </html>
