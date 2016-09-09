@@ -78,7 +78,7 @@
                         <a class="page-scroll" href="#services">Task assignments</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Links to documentst</a>
+                        <a class="page-scroll" href="#contact">Links to documents</a>
                     </li>
                 </ul>
             </div>
@@ -93,7 +93,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Project summary</h1>
-                  <p><strong>Implemenation of audit recommentations</strong> </p> <p> As the Legislature considers creating a public program for shared gang database oversight and accountability, Justice should guide the board and the committee to identify and address the shortcomings that exist in CalGang's current operations and oversight. The guidance Justice provides to the board and the committee should address, but not be limited to, the following areas. </p>
+                  <img src="https://oag.ca.gov/sites/all/files/agweb/images/calgang/gangnet.gif" alt="CalGang" height="200" width="200">
+                  <p><strong>Implementation of audit recommendations</strong> </p> <p> As the Legislature considers creating a public program for shared gang database oversight and accountability, Justice should guide the board and the committee to identify and address the shortcomings that exist in CalGang's current operations and oversight. The guidance Justice provides to the board and the committee should address, but not be limited to, the following areas. </p>
                     <a class="btn btn-default page-scroll" href="#about">See the timeline</a>
                 </div>
             </div>
@@ -146,12 +147,16 @@
 
   <script>
   var data = [
-    {id: 0, date: '2016-09-30', deadline: 1, description: 'Policies for unneeded accounts'},
-    {id: 1, date: '2016-10-31', deadline: 2, description: 'Post retroactive meeting information on AG website'},
-    {id: 2, date: '2017-01-15', deadline: 3, description: 'Biannual reports from user agencies on progress'},
-    {id: 3, date: '2017-06-30', deadline: 4, description: 'Quarterly reports on AG website; draft plan for recert training; develop best practices'},
-    {id: 4, date: '2018-06-30', deadline: 5, description: 'Implement training; users finish gang review'},
-    {id: 5, date: '2019-09-30', deadline: 6, description: 'Users finish review of individuals'}
+    {id: 0, date: '2016-09-30', task: 1, description: 'Develop policies and procedures requiring the disabling of user accounts for all individuals who no longer have a need to or right to access CalGang because they have separated from their employment with user agencies or for other reasons'},
+    {id: 1, date: '2016-10-31', task: 2, description: 'Post all available agendas, minutes, and referenced attachments from scheduled and ad hoc board and committee meetings, as well as all other documents of significance from the past five years to the AG website'},
+    {id: 2, date: '2017-01-15', task: 3, description: 'Instructing all user agencies to report to Justice every six months, beginning in January 2017, on their progress toward completing their gang and gang member reviews'},
+    {id: 3, date: '2017-06-30', task: 4, description: 'Develop best practices based on the requirements stated in the federal regulations (28 CFR 23), the state guidelines (CalGang Policy), and state law (PC 186.34). Advise user agencies on the implementation of those practices'},
+    {id: 4, date: '2017-06-30', task: 5, description: 'Develop standardized periodic training content for all CalGang users and training instructors'},
+    {id: 5, date: '2017-06-30', task: 6, description: 'Establish a plan to recertify all CalGang users and training instructors on the new training content'},
+    {id: 6, date: '2017-06-30', task: 7, description: 'Post quarterly reports on the AG website'},
+    {id: 7, date: '2018-06-30', task: 8, description: 'Instruct user agencies that use CalGang to complete comprehensive review of all the gangs documented in CalGang to determine if they meet the necessary requirements for inclusion and to purge from CalGang any groups that do not meet the requirements'},
+    {id: 8, date: '2018-06-30', task: 9, description: 'Implement re-certification training'},
+    {id: 9, date: '2019-09-30', task: 10, description: 'Instructing all user agencies to complete a comprehensive review of the records in CalGang to determine if the user agencies have adequate support for the criteria associated with all the individuals they have entered as gang members. If the user agencies do not have adequate support, they should immediately purge the criteria—and, if necessary, the individuals—from CalGang. In addition, the user agencies should ensure that all the fields in each CalGang record are accurate'}
   ];
   var dataset = new recline.Model.Dataset({
     records: data
@@ -166,7 +171,7 @@
   timeline.convertRecord = function(record, fields) {
     var out = this._convertRecord(record);
     if (out) {
-      out.headline = record.get('deadline').toString();
+      out.headline = record.get('task').toString();
     }
     return out;
   }
