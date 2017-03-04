@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>CalGang CSA Recommendations</title>
+    <title>your favorite skite</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,6 +23,7 @@
   
   	<!-- Recline CSS -->
   	<link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/flipclock.css">
 
   	<!-- Vendor JS - general dependencies -->
   	<script src="vendor/jquery/1.7.1/jquery.js" type="text/javascript"></script>
@@ -30,7 +31,6 @@
   	<script src="vendor/backbone/1.0.0/backbone.js" type="text/javascript"></script>
   	<script src="vendor/mustache/0.5.0-dev/mustache.js" type="text/javascript"></script>
   	<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" type="text/javascript"></script>
-  
   
   	<!-- Vendor JS - timeline dependencies -->
   	<script type="text/javascript" src="vendor/moment/2.0.0/moment.js"></script>
@@ -46,6 +46,10 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script type="text/javascript" src="vendor/instafeed.min.js"></script>
+
+    <script type="text/javascript" src="vendor/flipclock.js"></script>
   
     <style type="text/css">#mytimeline .recline-timeline { height: 600px; }</style>
   	  
@@ -65,7 +69,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">CalGang CSA Recommendations</a>
+                <a class="navbar-brand page-scroll" href="#page-top">@skandalismband</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -76,13 +80,13 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Timeline</a>
+                        <a class="page-scroll" href="#about">insta feed</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Task assignments</a>
+                        <a class="page-scroll" href="#services">new album march 25</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Links to documents</a>
+                        <a class="page-scroll" href="#contact">release show</a>
                     </li>
                 </ul>
             </div>
@@ -96,10 +100,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Project summary</h1>
-                  <img src="https://oag.ca.gov/sites/all/files/agweb/images/calgang/gangnet.gif" alt="CalGang" height="200" width="200">
-                  <p><strong>Implementation of audit recommendations</strong> </p> <p> As the Legislature considers creating a public program for shared gang database oversight and accountability, Justice should guide the board and the committee to identify and address the shortcomings that exist in CalGang's current operations and oversight. The guidance Justice provides to the board and the committee should address, but not be limited to, the following areas. </p>
-                    <a class="btn btn-default page-scroll" href="#about">See the timeline</a>
+                    <h1>We're not that good.</h1>
+                      <div id="instafeed"> </div>
                 </div>
             </div>
         </div>
@@ -111,7 +113,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Timeline</h1>
-                  <div id="mytimeline"> </div>
+                  <div class="clock flip-clock-wrapper" style="margin:2em;"><span class="flip-clock-divider days"><span class="flip-clock-label">Days</span></span><ul class="flip "><li class="flip-clock-before"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">2</div></div><div class="down"><div class="shadow"></div><div class="inn">2</div></div></a></li><li class="flip-clock-active"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">3</div></div><div class="down"><div class="shadow"></div><div class="inn">3</div></div></a></li></ul><ul class="flip "><li class="flip-clock-before"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">9</div></div><div class="down"><div class="shadow"></div><div class="inn">9</div></div></a></li><li class="flip-clock-active"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">0</div></div><div class="down"><div class="shadow"></div><div class="inn">0</div></div></a></li></ul><ul class="flip "><li class="flip-clock-before"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">2</div></div><div class="down"><div class="shadow"></div><div class="inn">2</div></div></a></li><li class="flip-clock-active"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">3</div></div><div class="down"><div class="shadow"></div><div class="inn">3</div></div></a></li></ul><span class="flip-clock-divider hours"><span class="flip-clock-label">Hours</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span><ul class="flip "><li class="flip-clock-before"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">9</div></div><div class="down"><div class="shadow"></div><div class="inn">9</div></div></a></li><li class="flip-clock-active"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">0</div></div><div class="down"><div class="shadow"></div><div class="inn">0</div></div></a></li></ul><ul class="flip  play"><li class="flip-clock-before"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">3</div></div><div class="down"><div class="shadow"></div><div class="inn">3</div></div></a></li><li class="flip-clock-active"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">2</div></div><div class="down"><div class="shadow"></div><div class="inn">2</div></div></a></li></ul><span class="flip-clock-divider minutes"><span class="flip-clock-label">Minutes</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span><ul class="flip  play"><li class="flip-clock-before"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">5</div></div><div class="down"><div class="shadow"></div><div class="inn">5</div></div></a></li><li class="flip-clock-active"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">4</div></div><div class="down"><div class="shadow"></div><div class="inn">4</div></div></a></li></ul><ul class="flip  play"><li class="flip-clock-before"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">6</div></div><div class="down"><div class="shadow"></div><div class="inn">6</div></div></a></li><li class="flip-clock-active"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">5</div></div><div class="down"><div class="shadow"></div><div class="inn">5</div></div></a></li></ul><span class="flip-clock-divider seconds"><span class="flip-clock-label">Seconds</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span><ul class="flip  play"><li class="flip-clock-before"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">1</div></div><div class="down"><div class="shadow"></div><div class="inn">1</div></div></a></li><li class="flip-clock-active"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">0</div></div><div class="down"><div class="shadow"></div><div class="inn">0</div></div></a></li></ul><ul class="flip  play"><li class="flip-clock-before"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">0</div></div><div class="down"><div class="shadow"></div><div class="inn">0</div></div></a></li><li class="flip-clock-active"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">9</div></div><div class="down"><div class="shadow"></div><div class="inn">9</div></div></a></li></ul></div>
                 </div>
             </div>
         </div>
@@ -169,43 +171,43 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
 
-  <script>
-  var data = [
-    {id: 0, date: '2016-09-30', task: 1, description: 'Develop policies and procedures requiring the disabling of user accounts for all individuals who no longer have a need to or right to access CalGang because they have separated from their employment with user agencies or for other reasons'},
-    {id: 1, date: '2016-10-31', task: 2, description: 'Post all available agendas, minutes, and referenced attachments from scheduled and ad hoc board and committee meetings, as well as all other documents of significance from the past five years to the AG website'},
-    {id: 2, date: '2017-01-15', task: 3, description: 'Instructing all user agencies to report to Justice every six months, beginning in January 2017, on their progress toward completing their gang and gang member reviews'},
-    {id: 3, date: '2017-06-30', task: 4, description: 'Develop best practices based on the requirements stated in the federal regulations (28 CFR 23), the state guidelines (CalGang Policy), and state law (PC 186.34). Advise user agencies on the implementation of those practices'},
-    {id: 4, date: '2017-06-30', task: 5, description: 'Develop standardized periodic training content for all CalGang users and training instructors'},
-    {id: 5, date: '2017-06-30', task: 6, description: 'Establish a plan to recertify all CalGang users and training instructors on the new training content'},
-    {id: 6, date: '2017-06-30', task: 7, description: 'Post quarterly reports on the AG website'},
-    {id: 7, date: '2018-06-30', task: 8, description: 'Instruct user agencies that use CalGang to complete comprehensive review of all the gangs documented in CalGang to determine if they meet the necessary requirements for inclusion and to purge from CalGang any groups that do not meet the requirements'},
-    {id: 8, date: '2018-06-30', task: 9, description: 'Implement re-certification training'},
-    {id: 9, date: '2019-09-30', task: 10, description: 'Instructing all user agencies to complete a comprehensive review of the records in CalGang to determine if the user agencies have adequate support for the criteria associated with all the individuals they have entered as gang members. If the user agencies do not have adequate support, they should immediately purge the criteria—and, if necessary, the individuals—from CalGang. In addition, the user agencies should ensure that all the fields in each CalGang record are accurate'}
-  ];
-  var dataset = new recline.Model.Dataset({
-    records: data
-  });
-  
-  var $el = $('#mytimeline');
-  var timeline = new recline.View.Timeline({
-    model: dataset
-  });
-  $el.append(timeline.el);
-  // set the headline/title for each record with x column
-  timeline.convertRecord = function(record, fields) {
-    var out = this._convertRecord(record);
-    if (out) {
-      out.headline = record.get('task').toString();
-    }
-    return out;
-  }
-  timeline.render();
+  <script type ="text/javascript">
+ 
+      var clock;
+
+      $(document).ready(function() {
+
+        // Grab the current date
+        var currentDate = new Date();
+
+        // Set some date in the future. In this case, it's always Jan 1
+        var futureDate  = new Date(currentDate.getFullYear() + 03, 25, 0);
+
+        // Calculate the difference in seconds between the future and current date
+        var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+        // Instantiate a coutdown FlipClock
+        clock = $('.clock').FlipClock(diff, {
+          clockFace: 'DailyCounter',
+          countdown: true
+        });
+      });
+    
   </script>
 
   <script>
     $(document).ready(function() {
     $('#example').DataTable();
 } );
+  </script>
+
+  <script type="text/javascript">
+    var userFeed = new Instafeed({
+        get: 'user',
+        userId: '56119485',
+        accessToken: '56119485.1677ed0.c8fe38a84e544fc4a90cf86bd7d4f726'
+    });
+    userFeed.run();
   </script>
   
 </body>
